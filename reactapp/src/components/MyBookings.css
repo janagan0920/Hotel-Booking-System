@@ -1,0 +1,126 @@
+.container, .bookings-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url("https://images.unsplash.com/photo-1501117716987-c8e2a72a1f6a") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  animation: fadeInDown 1s ease;
+}
+
+/* Booking Cards with individual room images */
+.booking-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(218, 215, 215, 0.3);
+  color: #fff;
+  overflow: hidden;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Background image layer inside each card */
+.booking-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Different room images for each card */
+.booking-card.room1::before {
+  background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+}
+
+.booking-card.room2::before {
+  background-image: url("https://images.unsplash.com/photo-1600585154154-7129c28a2f3c");
+}
+
+.booking-card.room3::before {
+  background-image: url("https://images.unsplash.com/photo-1600585153837-898a23729f1d");
+}
+
+/* Booking text inside card */
+.booking-card p {
+  margin: 0.3rem 0;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Tables with Transparency */
+.bookings-table, .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.bookings-table th, .bookings-table td,
+.admin-table th, .admin-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.bookings-table th, .admin-table th {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Status Tags */
+.status {
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.status-approved { background: #2ed573; }
+.status-rejected { background: #ff4757; }
+.status-pending { background: #ffa502; }
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

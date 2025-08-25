@@ -1,0 +1,176 @@
+/* Full page background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: url(https://wallpapercave.com/wp/wp11009775.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(165, 163, 163, 0.347); /* darker for more contrast */
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar h1:hover {
+  color: #ffd369;
+  transform: scale(1.05);
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #ffd369;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd369;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.admin-link {
+  font-weight: 600;
+  border: 1px solid #ffd369;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  margin-left: 2rem;
+  background: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+  background: #ffd369;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 80vh; /* reduced height so next section is visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(236, 232, 232, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #ffd369;
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ffba08;
+  transform: translateY(-2px);
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap; /* makes it responsive */
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.highlight-card h3 {
+  margin-bottom: 1rem;
+  color: #ffd369;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: auto;
+}

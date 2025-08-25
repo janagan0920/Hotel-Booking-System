@@ -1,0 +1,60 @@
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+.success-message {
+  color: green;
+  margin-top: 1em;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1em;
+}
+
+.available-badge {
+  color: green;
+  font-weight: bold;
+}
+
+.occupied-badge {
+  color: red;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,43 @@
+.admin-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.admin-table th, .admin-table td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.approve-btn, .reject-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  transition: 0.3s;
+}
+
+.approve-btn {
+  background: #2ed573;
+  color: #fff;
+}
+
+.approve-btn:hover {
+  background: #28a745;
+}
+
+.reject-btn {
+  background: #ff4757;
+  color: #fff;
+}
+
+.reject-btn:hover {
+  background: #e84118;
+}
